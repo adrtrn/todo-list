@@ -1,0 +1,18 @@
+<H1> T O D O  </H1>
+
+<div id='form-box'>
+<%= form_for :task do |f| %>
+  <p>
+    <%= f.text_field :title, size: '50', placeholder: 'Enter a task' %>
+    <%= f.submit 'Add Task' %>
+  </p>
+  </div>
+  
+<% end %>
+
+<% @tasks.each do |task| %>
+  <ul><%= task.title %>
+  <%= link_to "complete", task, method: :delete %></td>
+</ul>
+  <% end %>
+
